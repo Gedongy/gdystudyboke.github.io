@@ -35,6 +35,18 @@ Element.prototype.appendChild = function() {
     }
 };
 
+//函数内容如下
+function gitHubIoImg() {
+	var imgs = document.querySelectorAll('p img');
+	let origin = location.origin;
+	for (var i=0; i< imgs.length; i++) {
+		let img = imgs[i];
+		console.log(img.src);
+		var b = img.src.substr(img.src.lastIndexOf('/assets'), img.src.length);
+		let newsrc = origin + b;
+		console.log(newsrc);
+	}
+}
 
 var _hrefs = "https://www.aliyun.com/minisite/goods?taskPkg=1111ydsrwb&pkgSid=11811&userCode=goqhbyn3";
 function vueSidebarShow() {
@@ -43,6 +55,7 @@ function vueSidebarShow() {
 	
 		loadSidebar(_hrefs);
 	}
+  gitHubIoImg()
 
 }
 
